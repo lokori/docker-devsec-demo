@@ -7,4 +7,4 @@ flask run --host=172.17.0.1 &
 # docker run -t owasp/zap2docker-stable zap-baseline.py  -j -t http://172.17.0.1:5000
 
 # active quick attack scan
-docker run -i owasp/zap2docker-stable zap-cli quick-scan --self-contained --start-options '-config api.disablekey=true' --spider -r -s xss  http://172.17.0.1:5000
+docker run -i owasp/zap2docker-stable zap-cli quick-scan --self-contained --start-options '-config api.disablekey=true' --spider -r http://172.17.0.1:5000

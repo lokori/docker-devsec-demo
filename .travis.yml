@@ -7,6 +7,7 @@ services:
 
 before_install:
 - docker pull owasp/zap2docker-stable
+- pip install flask
 
 script:
 - ifconfig

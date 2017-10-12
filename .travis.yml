@@ -1,0 +1,17 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+before_install:
+- docker pull owasp/zap2docker-stable
+
+script:
+- export FLASK_APP=flask-vuln.py
+- flask run  &
+- curl -v localhost:5000
+
+
+

@@ -14,6 +14,5 @@ script:
 - ls -latr
 - chmod u+x start-and-scan.sh
 - ./start-and-scan.sh
-
-
-
+- chmod u+x run-dependency-check.sh
+- ./run-dependency-check.sh

@@ -25,4 +25,6 @@ For real projects, you would probably want to tune the tools to generate HTML re
 Mostly this is a matter of tuning the parameters and organizing some hosting for the documents.
 
 
+To get stuff out of the Docker container with proper user permissions use ```docker run -u uid:gid``` for running the commands in a real project.
+
 

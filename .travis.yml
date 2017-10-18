@@ -13,8 +13,8 @@ script:
 - ifconfig
 - ls -latr
 - chmod u+x *.sh
-- ./start-and-scan.sh
-- ./run-dependency-check.sh
+#- ./start-and-scan.sh
+#- ./run-dependency-check.sh
 - ./run-retirejs.sh
 - ./run-findsecbugs.sh
 

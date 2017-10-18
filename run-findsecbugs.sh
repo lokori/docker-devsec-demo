@@ -5,3 +5,5 @@
 docker pull lokori/findbugs-sec
 docker run  -v `pwd`/src/java:/workdir/src lokori/findbugs-sec src
 
+# getting the report out of the container use something like this
+# -html -output /workdir/src/findsec-report.html src

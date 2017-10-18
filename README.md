@@ -2,6 +2,9 @@
 
 Demo project about automating security testing with Docker. In this case we are running the stuff with [Travis CI](https://travis-ci.org/).
 
+Intentionally the source codes in this repository have some findings reported by the tools. Especially the Python application **is intentionally vulnerable to attacks** so do understand that running it on your own servers (as a demonstration) is a security risk!
+
+
 Currently this repository demonstrates using these tools through Docker containers:
 
 1. [OWASP Dependency Check](https://www.owasp.org/index.php/OWASP_Dependency_Check)

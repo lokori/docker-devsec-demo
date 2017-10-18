@@ -17,3 +17,12 @@ Currently this repository demonstrates using these tools through Docker containe
 
 In the usual case scanning requires authenticating the test user with some credentials. This is not currently easy, but soon will be. See [issue at GitHub](https://github.com/Grunny/zap-cli/issues/7).
 
+
+## Example log from Travis CI
+
+For real projects, you would probably want to tune the tools to generate HTML reports or something more readable and host these documents somewhere instead of having a load of stuff within the build server log. See [sample Travis CI log](travis-log.txt) as an example. Since this is a demo, the findings are reported within the build log, which would be annoying in a real project.
+
+Mostly this is a matter of tuning the parameters and organizing some hosting for the documents.
+
+
+

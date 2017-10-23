@@ -23,7 +23,13 @@ Another common trick is to use some sort of custom HTTP header (mocking SSO fron
 zap-cli scripts load --name=force-auth --script-type=proxy --engine='Oracle Nashorn' --file-path=$(pwd)zap-header.js
 ```
 
-
+Essentially zap-header.js boils down to this in this example:
+```
+function proxyRequest(msg) {
+    msg.getRequestHeader().setHeader("user-auth", "test-user")
+    return true
+}
+```
 
 ## Example log from Travis CI
 

@@ -17,6 +17,13 @@ Currently this repository demonstrates using these tools through Docker containe
 
 In the usual case scanning requires authenticating the test user with some credentials. This is not currently easy, but soon will be. See [issue at GitHub](https://github.com/Grunny/zap-cli/issues/7).
 
+Another common trick is to use some sort of custom HTTP header (mocking SSO frontend for example) which specifies the authenticated user. This can be achieved like this. Load a custom script which forces a HTTP header for each request.
+
+```
+zap-cli scripts load --name=force-auth --script-type=proxy --engine='Oracle Nashorn' --file-path=$(pwd)zap-header.js
+```
+
+
 
 ## Example log from Travis CI
 

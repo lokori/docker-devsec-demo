@@ -12,6 +12,8 @@ Currently this repository demonstrates using these tools through Docker containe
 3. [retire.js](https://retirejs.github.io/retire.js/)
 4. [Find Security Bugs](http://find-sec-bugs.github.io/) (+ [FindBugs](http://findbugs.sourceforge.net/))
 
+![simplified_security_pipeline](simplified_security_pipeline.png)
+
 
 ## Note about ZAP scanning
 
@@ -30,6 +32,8 @@ function proxyRequest(msg) {
     return true
 }
 ```
+
+
 
 ## Example log from Travis CI
 

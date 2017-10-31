@@ -4,8 +4,8 @@
 
 OWASPDC_DIRECTORY=$HOME/OWASP-Dependency-Check
 DATA_DIRECTORY="$OWASPDC_DIRECTORY/data"
-REPORT_DIRECTORY="$OWASPDC_DIRECTORY/reports"
-#REPORT_DIRECTORY= "$(pwd)/reports"
+# REPORT_DIRECTORY="$OWASPDC_DIRECTORY/reports"
+REPORT_DIRECTORY="$(pwd)/reports"
 
 if [ ! -d "$DATA_DIRECTORY" ]; then
     echo "Initially creating persistent directories"
@@ -30,7 +30,7 @@ docker run --rm \
     # Use suppression like this: (/src == $pwd)
     # --suppression "/src/security/dependency-check-suppression.xml"
 
-ls -altr reports
+mv target/dependency-check-report.* reports
 
 # Force "ok" for Travis
 exit 0

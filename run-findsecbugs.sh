@@ -3,7 +3,6 @@
 # https://github.com/lokori/findbugs-security-docker
 
 docker pull lokori/findbugs-sec
-docker run --rm -v `pwd`:/workdir/src lokori/findbugs-sec src
+docker run --rm -v `pwd`:/workdir/src lokori/findbugs-sec  -html:fancy-hist.xsl -output /workdir/src/reports/findsec-report.html src
 
-# getting the report out of the container use something like this
-# -html -output /workdir/src/findsec-report.html src
+

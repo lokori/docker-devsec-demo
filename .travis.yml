@@ -9,9 +9,22 @@ before_install:
 - docker pull owasp/zap2docker-stable
 - pip install flask
 
+deploy:
+  provider: s3
+  access_key_id: "$ARTIFACTS_ID"
+  secret_access_key: "$ARTIFACTS_KEY"
+  bucket: devsec
+  local-dir: reports
+  upload-dir: latest
+  acl: public_read
+  skip_cleanup: true
+  region: eu-west-1
+  on:
+    repo: lokori/docker-devsec-demo
+
+
 script:
-- ifconfig
-- ls -latr
+- mkdir reports
 - chmod u+x *.sh
 - ./start-and-scan.sh
 - ./run-dependency-check.sh

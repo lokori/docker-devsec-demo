@@ -37,11 +37,12 @@ function proxyRequest(msg) {
 
 ## Example log from Travis CI
 
-For real projects, you would probably want to tune the tools to generate HTML reports or something more readable and host these documents somewhere instead of having a load of stuff within the build server log. See [sample Travis CI log](travis-log.txt) as an example. Since this is a demo, the findings are reported within the build log, which would be annoying in a real project.
+For real projects, you would probably want to tune the tools to generate HTML reports or something more readable and host these documents somewhere instead of having a load of stuff within the build server log. See [sample Travis CI log](travis-log.txt) as an example. 
 
-Mostly this is a matter of tuning the parameters and organizing some hosting for the documents.
+## Reports out of the docker container
+
+This is currently under development, but this example now uploads some of the generated reports to Amazon S3 bucket from Travis. This means basically mounting a local directory for the Docker container so that the container can write a file to the host machine. After container shuts down the file is then uploaded to S3.
 
 
-To get stuff out of the Docker container with proper user permissions use ```docker run -u uid:gid``` for running the commands in a real project.
 
 

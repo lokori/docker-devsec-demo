@@ -19,7 +19,7 @@ fi
 # Make sure we are using the latest version
 docker pull owasp/dependency-check
 
-docker run --rm \
+docker run -u=$UID:$(id -g $USER) --rm \
     --volume "$(pwd)/target":/src \
     --volume "$DATA_DIRECTORY":/usr/share/dependency-check/data \
     --volume "$REPORT_DIRECTORY":/report \
@@ -30,7 +30,7 @@ docker run --rm \
     # Use suppression like this: (/src == $pwd)
     # --suppression "/src/security/dependency-check-suppression.xml"
 
-mv target/dependency-check-report.* reports
+mv target/dependency-* reports
 
 # Force "ok" for Travis
 exit 0

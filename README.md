@@ -1,5 +1,7 @@
 # Docker DevSec demo project
 
+[![Build Status](https://travis-ci.org/lokori/docker-devsec-demo.svg?branch=master)](https://travis-ci.org/lokori/docker-devsec-demo)
+
 Demo project about automating security testing with Docker. In this case we are running the stuff with [Travis CI](https://travis-ci.org/).
 
 Intentionally the source codes in this repository have some findings reported by the tools. Especially the Python application **is intentionally vulnerable to attacks** so do understand that running it on your own servers (as a demonstration) is a security risk!
@@ -43,6 +45,8 @@ For real projects, you would probably want to tune the tools to generate HTML re
 
 This is currently under development, but this example now uploads some of the generated reports to Amazon S3 bucket from Travis. This means basically mounting a local directory for the Docker container so that the container can write a file to the host machine. After container shuts down the file is then uploaded to S3.
 
+
+http://devsec.s3-website-eu-west-1.amazonaws.com/findsec-report.html
 
 
 

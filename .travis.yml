@@ -26,6 +26,7 @@ deploy:
 script:
 - mkdir reports
 - chmod a+rwx reports
+- chmod a+rwx target
 - chmod u+x *.sh
 - ./start-and-scan.sh
 - ./run-dependency-check.sh

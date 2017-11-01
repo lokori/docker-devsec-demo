@@ -10,7 +10,7 @@ flask run --host=172.17.0.1 &
 # docker run -i owasp/zap2docker-stable zap-cli quick-scan --self-contained --start-options '-config api.disablekey=true' --spider -r http://172.17.0.1:5000 
 
 # More comprehensive scan script
-./scan-with-zap.sh
+./scan-with-zap.sh http://172.17.0.1:5000
 
 # Force "ok" for Travis
 exit 0
